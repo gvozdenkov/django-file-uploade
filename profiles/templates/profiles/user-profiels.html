@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}User Profiles{% endblock title %}
+
+{% block content %}
+
+    <ul>
+        {% for profile in profiles %}
+            <li>
+                <img src="{{ profile.image.url }}">
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
